@@ -1,3 +1,11 @@
+<?php
+
+include 'config/function.php';
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -168,23 +176,29 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary py-5 px-4 px-sm-5">
-                        <form class="py-5">
+                        <form class="py-5" method="POST" action = "proses.php">
                             <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" placeholder="Masukan Namamu" required="required" />
+                                <input type="text" class="form-control border-0 p-4" name = "nama" placeholder="Masukan Nama" required="required" />
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control border-0 p-4" placeholder="Memasukan Emailmu" required="required" />
+                                <input type="number" class="form-control border-0 p-4" name = "nohp" placeholder="Masukan Nomor Handphone" required="required" />
                             </div>
                             <div class="form-group">
-                                <select class="custom-select border-0 px-4" style="height: 47px;">
+                                <input type="email" class="form-control border-0 p-4" name = "email" placeholder="Masukan Email" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control border-0 p-4" name = "alamat" placeholder="Masukan Alamat" required="required" />
+                            </div>
+                            <div class="form-group">
+                                <select class="custom-select border-0 px-4" name = "produk" style="height: 47px;">
                                     <option selected>Pilih Pembuatan Pagar</option>
-                                    <option value="1">Pagar Kusen</option>
-                                    <option value="2">Pagar Besi</option>
-                                    <option value="3">Pagar Baja</option>
+                                    <option value="Pagar Kusen">Pagar Kusen</option>
+                                    <option value="Pagar Besi">Pagar Besi</option>
+                                    <option value="Pagar Baja">Pagar Baja</option>
                                 </select>
                             </div>
                             <div>
-                                <a href="https://wa.me/089646306691?text=Saya%20Tertarik%20Dengan%20Jasa%20Togar" class="btn btn-primary py-2 px-4 d-none d-lg-block">Dapatkan Penawaran</a>
+                                <!--<a href="https://wa.me/089646306691?text=Saya%20Tertarik%20Dengan%20Jasa%20Togar" class="btn btn-primary py-2 px-4 d-none d-lg-block">Dapatkan Penawaran</a>-->
                                 <button class="btn btn-dark btn-block border-0 py-3" type="submit">Dapatkan Penawaran</button>
                             </div>
                         </form>
@@ -193,6 +207,7 @@
             </div>
         </div>
     </div>
+    
     <!-- Quote Request Start -->
 
 

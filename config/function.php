@@ -2,7 +2,7 @@
     $server = "localhost";
     $user = "root";
     $pass = "";
-    $database = "cafe";
+    $database = "togar";
 
     $conn = mysqli_connect($server, $user, $pass, $database);
 
@@ -18,6 +18,19 @@
             $rows[] = $row;
         }
         return $rows;
+    }
+
+    function tambahOrderan($nama, $produk, $nohp, $email, $alamat, $harga){
+        global $conn;
+        $sql = "INSERT INTO orderan (nama, produk, nohp, email, alamat, harga)
+                VALUES ('$nama', '$produk', '$nohp', '$email', '$alamat', '$harga')";
+        $result = mysqli_query($conn, $sql);
+        if ($result) {
+            echo "<script>alert('Pesanan Telah Terinput')</script>";
+            //header("Location: index.php");
+        } else {
+            echo "<script>alert('Woops! Terjadi kesalahan.')</script>";
+        }
     }
   
 
