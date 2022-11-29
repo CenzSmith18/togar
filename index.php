@@ -82,7 +82,10 @@ session_start();
                     <a href="service.php" class="nav-item nav-link">Service</a>
                     <a href="contact.php" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="https://wa.me/089646306691?text=Saya%20Tertarik%20Dengan%20Jasa%20Togar" class="btn btn-primary py-2 px-4 d-none d-lg-block">Dapatkan Penawaran</a>
+                <button type="button" class="btn btn-primary py-2 px-4 d-none d-lg-block" data-toggle="modal" data-target="#exampleModal">
+                    Dapatkan Penawaran
+                </button>
+               
             </div>
         </nav>
     </div>
@@ -96,9 +99,10 @@ session_start();
             <h1 class="text-white display-3 mb-5">Memperindah Rumah Kita</h1>
             <div class="mx-auto" style="width: 100%; max-width: 600px;">
                 <div class="input-group">
-                    <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Ayoo Oder">
+                    <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Dapatkan Penawaran">
                     <div class="input-group-append">
-                        <button class="btn btn-primary px-3">Click Here</button>
+                        <button class="btn btn-primary px-3" onClick="document.getElementById('down').scrollIntoView();" >Click Here</button>
+                        
                     </div>
                 </div>
             </div>
@@ -176,38 +180,37 @@ session_start();
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary py-5 px-4 px-sm-5">
-                        <form class="py-5" method="POST" action = "proses.php">
-                            <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" name = "nama" placeholder="Masukan Nama" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <input type="number" class="form-control border-0 p-4" name = "nohp" placeholder="Masukan Nomor Handphone" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control border-0 p-4" name = "email" placeholder="Masukan Email" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control border-0 p-4" name = "alamat" placeholder="Masukan Alamat" required="required" />
-                            </div>
-                            <div class="form-group">
-                                <select class="custom-select border-0 px-4" name = "produk" style="height: 47px;">
-                                    <option selected>Pilih Pembuatan Pagar</option>
-                                    <option value="Pagar Kusen">Pagar Kusen</option>
-                                    <option value="Pagar Besi">Pagar Besi</option>
-                                    <option value="Pagar Baja">Pagar Baja</option>
-                                </select>
-                            </div>
-                            <div>
-                                <!--<a href="https://wa.me/089646306691?text=Saya%20Tertarik%20Dengan%20Jasa%20Togar" class="btn btn-primary py-2 px-4 d-none d-lg-block">Dapatkan Penawaran</a>-->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                    Dapatkan Penawaran
-                                </button>
-                                <button class="btn btn-dark btn-block border-0 py-3" type="submit">Dapatkan Penawaran</button>
-                            </div>
-                        </form>
+                        <div id="down">
+                            <form class="py-5" method="POST" action = "proses.php">
+                                <div class="form-group">
+                                    <input type="text" class="form-control border-0 p-4" name = "nama" placeholder="Masukan Nama" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" class="form-control border-0 p-4" name = "nohp" placeholder="Masukan Nomor Handphone" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control border-0 p-4" name = "email" placeholder="Masukan Email" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control border-0 p-4" name = "alamat" placeholder="Masukan Alamat" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <select class="custom-select border-0 px-4" name = "produk" style="height: 47px;">
+                                        <option selected>Pilih Pembuatan Pagar</option>
+                                        <option value="Pagar Kusen">Pagar Kusen</option>
+                                        <option value="Pagar Besi">Pagar Besi</option>
+                                        <option value="Pagar Baja">Pagar Baja</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <!--<a href="https://wa.me/089646306691?text=Saya%20Tertarik%20Dengan%20Jasa%20Togar" class="btn btn-primary py-2 px-4 d-none d-lg-block">Dapatkan Penawaran</a>-->
+                                    
+                                    <button class="btn btn-dark btn-block border-0 py-3" type="submit">Dapatkan Penawaran</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
