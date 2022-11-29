@@ -9175,6 +9175,14 @@ button.bg-dark:focus {
   text-align: center !important;
 }
 
+.section-offer {
+  margin: auto;
+  width: 50%;
+ 
+  padding: 10px;
+
+}
+
 @media (min-width: 576px) {
   .text-sm-left {
     text-align: left !important;

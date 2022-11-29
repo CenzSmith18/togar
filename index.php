@@ -199,6 +199,9 @@ session_start();
                             </div>
                             <div>
                                 <!--<a href="https://wa.me/089646306691?text=Saya%20Tertarik%20Dengan%20Jasa%20Togar" class="btn btn-primary py-2 px-4 d-none d-lg-block">Dapatkan Penawaran</a>-->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                    Dapatkan Penawaran
+                                </button>
                                 <button class="btn btn-dark btn-block border-0 py-3" type="submit">Dapatkan Penawaran</button>
                             </div>
                         </form>
@@ -207,6 +210,52 @@ session_start();
             </div>
         </div>
     </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Dapatkan Penawaran</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="py-5" method="POST" action = "proses.php">
+            <div class="form-group">
+                <input type="text" class="form-control border-0 p-4" name = "nama" placeholder="Masukan Nama" required="required" />
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control border-0 p-4" name = "nohp" placeholder="Masukan Nomor Handphone" required="required" />
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control border-0 p-4" name = "email" placeholder="Masukan Email" required="required" />
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control border-0 p-4" name = "alamat" placeholder="Masukan Alamat" required="required" />
+            </div>
+            <div class="form-group">
+                <select class="custom-select border-0 px-4" name = "produk" style="height: 47px;">
+                    <option selected>Pilih Pembuatan Pagar</option>
+                    <option value="Pagar Kusen">Pagar Kusen</option>
+                    <option value="Pagar Besi">Pagar Besi</option>
+                    <option value="Pagar Baja">Pagar Baja</option>
+                </select>
+            </div>
+            <div>
+                <!--<a href="https://wa.me/089646306691?text=Saya%20Tertarik%20Dengan%20Jasa%20Togar" class="btn btn-primary py-2 px-4 d-none d-lg-block">Dapatkan Penawaran</a>-->
+               
+               
+            </div>
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
     
     <!-- Quote Request Start -->
 
@@ -551,7 +600,7 @@ session_start();
         </div>
     </div>
     Blog End -->
-
+  
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
@@ -631,6 +680,12 @@ session_start();
     <!-- Contact Javascript File -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
+
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
